@@ -22,7 +22,7 @@ build:
     - npm run build
   artifacts:
     paths:
-      - dist/
+      - .next/
 
 sast:
   stage: test
@@ -31,8 +31,8 @@ test:
   stage: test
   image: yobasystems/alpine-nodejs:min
   script:
-    - 'if [ ! -d "dist" ]; then echo "Build failed: dist directory not found" && exit 1; fi'
-    - 'if [ -z "$(ls -A dist)" ]; then echo "Build failed: dist directory is empty" && exit 1; fi'
+    - 'if [ ! -d ".next" ]; then echo "Build failed: .next directory not found" && exit 1; fi'
+    - 'if [ -z "$(ls -A .next)" ]; then echo "Build failed: .next directory is empty" && exit 1; fi'
     - echo "Build completed successfully"
   dependencies:
     - build
