@@ -1,6 +1,6 @@
-# Next.js Multi-tenant Starter Template
+# Next.js Multi-tenant Dashboard
 
-A minimalistic multi-tenant Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
+A minimalistic multi-tenant Next.js dashboard with minimal setup and a modular design. Bring your own backend and database.
 
 [Demo](https://stack-template.vercel.app/)
 
@@ -33,7 +33,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 1. Clone the repository
 
     ```bash
-    git clone git@github.com:stack-auth/stack-template.git
+    git clone {REPO_URL}
     ```
 
 2. Install dependencies
