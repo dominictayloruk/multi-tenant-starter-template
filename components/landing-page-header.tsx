@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { useStackApp, useUser } from "@stackframe/stack";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
-import { useSelectedLayoutSegment } from "next/navigation";
-import * as React from "react";
-import { ColorModeSwitcher } from "./color-mode-switcher";
-import { Logo } from "./logo";
-import { Button, buttonVariants } from "./ui/button";
+import { cn } from '@/lib/utils';
+import { useStackApp, useUser } from '@stackframe/stack';
+import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import * as React from 'react';
+import { ColorModeSwitcher } from './color-mode-switcher';
+import { Logo } from './logo';
+import { Button, buttonVariants } from './ui/button';
 
 interface NavProps {
   items?: {
@@ -25,14 +25,14 @@ function SignInSignUpButtons() {
     <>
       <Link
         href={app.urls.signIn}
-        className={buttonVariants({ variant: "secondary" })}
+        className={buttonVariants({ variant: 'secondary' })}
       >
         Sign In
       </Link>
 
       <Link
         href={app.urls.signUp}
-        className={buttonVariants({ variant: "default" })}
+        className={buttonVariants({ variant: 'default' })}
       >
         Sign Up
       </Link>
@@ -47,7 +47,7 @@ function AuthButtonsInner() {
     return (
       <Link
         href="/dashboard"
-        className={buttonVariants({ variant: "default" })}
+        className={buttonVariants({ variant: 'default' })}
       >
         Dashboard
       </Link>
@@ -67,25 +67,25 @@ function AuthButtons() {
 
 function MobileItems(props: NavProps) {
   return (
-    <div className="fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 animate-in slide-in-from-bottom-80 md:hidden">
-      <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
+    <div className="animate-in slide-in-from-bottom-80 fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 md:hidden">
+      <div className="bg-popover text-popover-foreground relative z-20 grid gap-6 rounded-md p-4 shadow-md">
         <nav className="grid grid-flow-row auto-rows-max text-sm">
           {props.items?.map((item, index) => (
             <Link
               key={index}
-              href={item.disabled ? "#" : item.href}
+              href={item.disabled ? '#' : item.href}
               className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
-                item.disabled && "cursor-not-allowed opacity-60"
+                'flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline',
+                item.disabled && 'cursor-not-allowed opacity-60',
               )}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noreferrer" : undefined}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noreferrer' : undefined}
             >
               {item.title}
             </Link>
           ))}
 
-          <div className="flex flex-col gap-2 mt-4">
+          <div className="mt-4 flex flex-col gap-2">
             <AuthButtons />
           </div>
         </nav>
@@ -102,16 +102,16 @@ function DesktopItems(props: NavProps) {
       {props.items?.map((item, index) => (
         <Link
           key={index}
-          href={item.disabled ? "#" : item.href}
+          href={item.disabled ? '#' : item.href}
           className={cn(
-            "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+            'hover:text-foreground/80 flex items-center text-lg font-medium transition-colors sm:text-sm',
             item.href.startsWith(`/${segment}`)
-              ? "text-foreground"
-              : "text-foreground/60",
-            item.disabled && "cursor-not-allowed opacity-80"
+              ? 'text-foreground'
+              : 'text-foreground/60',
+            item.disabled && 'cursor-not-allowed opacity-80',
           )}
-          target={item.external ? "_blank" : undefined}
-          rel={item.external ? "noreferrer" : undefined}
+          target={item.external ? '_blank' : undefined}
+          rel={item.external ? 'noreferrer' : undefined}
         >
           {item.title}
         </Link>
@@ -124,7 +124,7 @@ export function LandingPageHeader(props: NavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
-    <header className="fixed w-full z-50 bg-background/80 px-4 md:px-8 backdrop-blur-sm">
+    <header className="bg-background/80 fixed z-50 w-full px-4 backdrop-blur-sm md:px-8">
       <div className="flex h-18 items-center justify-between py-4">
         <div className="flex items-center gap-4 md:gap-10">
           <Logo className="hidden md:flex" />
@@ -149,9 +149,9 @@ export function LandingPageHeader(props: NavProps) {
           {showMobileMenu && props.items && <MobileItems items={props.items} />}
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <ColorModeSwitcher />
-          <nav className="gap-4 items-center hidden md:flex">
+          <nav className="hidden items-center gap-4 md:flex">
             <AuthButtons />
           </nav>
         </div>

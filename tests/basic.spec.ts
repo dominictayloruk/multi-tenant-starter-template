@@ -19,19 +19,27 @@ test('should navigate to Sign In page', async ({ page }) => {
   await expect(page).toHaveURL(/.*\/sign-in/);
 
   // Optional: Check for a heading on the sign-in page
-  await expect(page.getByRole('heading', { name: 'Sign in to your account' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Sign in to your account' }),
+  ).toBeVisible();
 
   // Check for link to Sign up page
   await expect(page.getByRole('link', { name: 'Sign up' })).toBeVisible();
 
   // Check for the Sign in with GitHub button
-  await expect(page.getByRole('button', { name: 'Sign in with GitHub' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Sign in with GitHub' }),
+  ).toBeVisible();
 
   // Check for the Sign in with Google button
-  await expect(page.getByRole('button', { name: 'Sign in with Google' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Sign in with Google' }),
+  ).toBeVisible();
 
   // Check for the Sign in with Passkey button
-  await expect(page.getByRole('button', { name: 'Sign in with Passkey' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Sign in with Passkey' }),
+  ).toBeVisible();
 
   // Check for the email input field
   await expect(page.locator('input[name="email"]')).toBeVisible();
@@ -51,16 +59,22 @@ test('should navigate to Sign Up page', async ({ page }) => {
   await expect(page).toHaveURL(/.*\/sign-up/);
 
   // Optional: Check for a heading on the sign-up page
-  await expect(page.getByRole('heading', { name: 'Create a new account' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Create a new account' }),
+  ).toBeVisible();
 
   // Check for link to sign in page
   await expect(page.getByRole('link', { name: 'Sign in' })).toBeVisible();
 
   // Check for the Sign up with GitHub button
-  await expect(page.getByRole('button', { name: 'Sign up with GitHub' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Sign up with GitHub' }),
+  ).toBeVisible();
 
   // Check for the Sign up with Google button
-  await expect(page.getByRole('button', { name: 'Sign up with Google' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Sign up with Google' }),
+  ).toBeVisible();
 
   // Check for the email input field
   await expect(page.locator('input[name="email"]')).toBeVisible();
@@ -68,4 +82,3 @@ test('should navigate to Sign Up page', async ({ page }) => {
   // Check for the Send email button
   await expect(page.getByRole('button', { name: 'Send email' })).toBeVisible();
 });
-

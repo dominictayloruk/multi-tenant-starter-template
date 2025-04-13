@@ -1,6 +1,6 @@
-import React from "react";
-import { Check } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import React from 'react';
+import { Check } from 'lucide-react';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import Link from "next/link";
+} from '@/components/ui/card';
+import Link from 'next/link';
 
 type PricingCardProps = {
   title: string;
@@ -25,7 +25,7 @@ export function PricingCard(props: PricingCardProps) {
   return (
     <Card
       className={`w-full max-w-sm ${
-        props.isPopular ? "border-primary border-2 shadow-lg" : ""
+        props.isPopular ? 'border-primary border-2 shadow-lg' : ''
       }`}
     >
       <CardHeader>
@@ -40,7 +40,7 @@ export function PricingCard(props: PricingCardProps) {
         <ul className="space-y-2">
           {props.features.map((feature, index) => (
             <li key={index} className="flex items-center">
-              <Check className="mr-2 h-4 w-4 text-primary" />
+              <Check className="text-primary mr-2 h-4 w-4" />
               <span>{feature}</span>
             </li>
           ))}
@@ -50,7 +50,7 @@ export function PricingCard(props: PricingCardProps) {
         <Link
           href={props.buttonHref}
           className={buttonVariants({
-            variant: props.isPopular ? "default" : "outline",
+            variant: props.isPopular ? 'default' : 'outline',
           })}
         >
           {props.buttonText}
@@ -71,8 +71,8 @@ export function PricingGrid(props: {
       className="container space-y-6 py-8 md:py-12 lg:py-24"
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center space-y-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold">{props.title}</h2>
-        <p className="max-w-[85%] text-muted-foreground sm:text-lg">
+        <h2 className="text-3xl font-semibold md:text-4xl">{props.title}</h2>
+        <p className="text-muted-foreground max-w-[85%] sm:text-lg">
           {props.subtitle}
         </p>
       </div>

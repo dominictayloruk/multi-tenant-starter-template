@@ -4,12 +4,12 @@ export function FeatureGridItem(props: {
   description: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-      <div className="flex h-[180px] flex-col rounded-md p-6 gap-4">
+    <div className="bg-background relative overflow-hidden rounded-lg border p-2">
+      <div className="flex h-[180px] flex-col gap-4 rounded-md p-6">
         {props.icon}
         <div className="space-y-2">
           <h3 className="font-bold">{props.title}</h3>
-          <p className="text-sm text-muted-foreground">{props.description}</p>
+          <p className="text-muted-foreground text-sm">{props.description}</p>
         </div>
       </div>
     </div>
@@ -31,10 +31,8 @@ export function FeatureGrid(props: {
       className="container space-y-6 py-8 md:py-12 lg:py-24"
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center space-y-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold">
-          {props.title}
-        </h2>
-        <p className="max-w-[85%] text-muted-foreground sm:text-lg">
+        <h2 className="text-3xl font-semibold md:text-4xl">{props.title}</h2>
+        <p className="text-muted-foreground max-w-[85%] sm:text-lg">
           {props.subtitle}
         </p>
       </div>

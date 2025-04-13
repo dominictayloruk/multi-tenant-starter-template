@@ -1,6 +1,7 @@
 # Next.js Multi-tenant Dashboard
 
-A minimalistic multi-tenant Next.js dashboard with minimal setup and a modular design. Bring your own backend and database.
+A minimalistic multi-tenant Next.js dashboard with minimal setup and a modular
+design. Bring your own backend and database.
 
 [Demo](https://stack-template.vercel.app/)
 
@@ -32,39 +33,44 @@ A minimalistic multi-tenant Next.js dashboard with minimal setup and a modular d
 
 1. Clone the repository
 
-    ```bash
-    git clone {REPO_URL}
-    ```
+   ```bash
+   git clone {REPO_URL}
+   ```
 
 2. Install dependencies
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-3. Register an account on [Stack Auth](https://stack-auth.com), copy the keys from the dashboard, and paste them into the `.env.local` file. Then, enable "client team creation" on the team settings tab.
+3. Register an account on [Stack Auth](https://stack-auth.com), copy the keys
+   from the dashboard, and paste them into the `.env.local` file. Then, enable
+   "client team creation" on the team settings tab.
 
-    If you want to learn more about Stack Auth or self-host it, check out the [Docs](https://docs.stack-auth.com) and [GitHub](https://github.com/stack-auth/stack).
+   If you want to learn more about Stack Auth or self-host it, check out the
+   [Docs](https://docs.stack-auth.com) and
+   [GitHub](https://github.com/stack-auth/stack).
 
-4. Start the development server and go to [http://localhost:3000](http://localhost:3000)
+4. Start the development server and go to
+   [http://localhost:3000](http://localhost:3000)
 
-    ```bash
-    npm run dev 
-    ```
+   ```bash
+   npm run dev
+   ```
 
 ## Deploying Dashboard
 
 1. Build the application
 
-    ```bash
-    npm run build
-    ```
+   ```bash
+   npm run build
+   ```
 
 2. Start the production server
 
-    ```bash
-    npm run start
-    ```
+   ```bash
+   npm run start
+   ```
 
 ## Features & Tech Stack
 

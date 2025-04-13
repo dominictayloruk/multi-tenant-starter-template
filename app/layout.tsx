@@ -1,15 +1,15 @@
-import { StackProvider, StackTheme } from "@stackframe/stack";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { stackServerApp } from "../stack";
-import "./globals.css";
-import { Provider } from "./provider";
+import { StackProvider, StackTheme } from '@stackframe/stack';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { stackServerApp } from '../stack';
+import './globals.css';
+import { Provider } from './provider';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Stack Template",
-  description: "A Multi-tenant Next.js Starter Template",
+  title: 'Stack Template',
+  description: 'A Multi-tenant Next.js Starter Template',
 };
 
 export default function RootLayout({

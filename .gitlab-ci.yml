@@ -6,13 +6,13 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 include:
-- template: Security/SAST.gitlab-ci.yml
-- template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
 
 stages:
-- build
-- test
-- deploy
+  - build
+  - test
+  - deploy
 
 build:
   stage: build
@@ -31,8 +31,10 @@ test:
   stage: test
   image: yobasystems/alpine-nodejs:min
   script:
-    - 'if [ ! -d ".next" ]; then echo "Build failed: .next directory not found" && exit 1; fi'
-    - 'if [ -z "$(ls -A .next)" ]; then echo "Build failed: .next directory is empty" && exit 1; fi'
+    - 'if [ ! -d ".next" ]; then echo "Build failed: .next directory not found"
+      && exit 1; fi'
+    - 'if [ -z "$(ls -A .next)" ]; then echo "Build failed: .next directory is
+      empty" && exit 1; fi'
     - echo "Build completed successfully"
   dependencies:
     - build
