@@ -4,7 +4,7 @@ export default function Layout(props: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col h-screen">
     <HandlerHeader />
-    <div className="flex-grow">
+    <div className="grow">
       {props.children}
     </div>
   </div>

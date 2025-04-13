@@ -6,7 +6,7 @@ import { LucideIcon, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -57,7 +57,7 @@ function NavItem(props: {
       className={cn(
         buttonVariants({ variant: "ghost", size: "sm" }),
         selected && "bg-muted",
-        "flex-grow justify-start text-md text-zinc-800 dark:text-zinc-300 px-2"
+        "grow justify-start text-md text-zinc-800 dark:text-zinc-300 px-2"
       )}
       onClick={props.onClick}
       prefetch={true}
@@ -82,7 +82,7 @@ function SidebarContent(props: {
       <div className="h-14 flex items-center px-2 shrink-0 mr-10 md:mr-0 border-b">
         {props.sidebarTop}
       </div>
-      <div className="flex flex-grow flex-col gap-2 pt-4 overflow-y-auto">
+      <div className="flex grow flex-col gap-2 pt-4 overflow-y-auto">
         {props.items.map((item, index) => {
           if (item.type === "separator") {
             return <Separator key={index} className="my-2" />;
@@ -99,7 +99,7 @@ function SidebarContent(props: {
           } else {
             return (
               <div key={index} className="flex my-2">
-                <div className="flex-grow justify-start text-sm font-medium text-zinc-500 px-2">
+                <div className="grow justify-start text-sm font-medium text-zinc-500 px-2">
                   {item.name}
                 </div>
               </div>
@@ -107,7 +107,7 @@ function SidebarContent(props: {
           }
         })}
 
-        <div className="flex-grow" />
+        <div className="grow" />
       </div>
     </div>
   );
@@ -125,12 +125,12 @@ function HeaderBreadcrumb(props: { items: SidebarItem[], baseBreadcrumb?: Header
     <Breadcrumb>
       <BreadcrumbList>
         {props.baseBreadcrumb?.map((item, index) => (
-          <>
-            <BreadcrumbItem key={index}>
+          <React.Fragment key={`breadcrumb-fragment-${index}`}>
+            <BreadcrumbItem key={`breadcrumb-item-${index}`}>
               <BreadcrumbLink href={item.href}>{item.title}</BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator key={`separator-${index}`} />
-          </>
+            <BreadcrumbSeparator key={`breadcrumb-separator-${index}`} />
+          </React.Fragment>
         ))}
 
         <BreadcrumbItem>
@@ -156,7 +156,7 @@ export default function SidebarLayout(props: {
       <div className="flex-col border-r w-[240px] h-screen sticky top-0 hidden md:flex">
         <SidebarContent items={props.items} sidebarTop={props.sidebarTop} basePath={props.basePath} />
       </div>
-      <div className="flex flex-col flex-grow w-0">
+      <div className="flex flex-col grow w-0">
         <div className="h-14 border-b flex items-center justify-between sticky top-0 bg-white dark:bg-black z-10 px-4 md:px-6">
           <div className="hidden md:flex">
             <HeaderBreadcrumb baseBreadcrumb={props.baseBreadcrumb} basePath={props.basePath} items={props.items} />
@@ -191,7 +191,7 @@ export default function SidebarLayout(props: {
             }
           />
         </div>
-        <div className="flex-grow">{props.children}</div>
+        <div className="grow">{props.children}</div>
       </div>
     </div>
   );
