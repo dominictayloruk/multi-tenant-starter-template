@@ -63,6 +63,7 @@ export function Graph() {
           fontSize={12}
           tickLine={false}
           axisLine={false}
+          tickFormatter={value => value}
         />
         <YAxis
           stroke="#888888"

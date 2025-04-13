@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Card,

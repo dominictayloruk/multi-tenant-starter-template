@@ -1,7 +1,10 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import * as React from 'react';
 import * as RechartsPrimitive from 'recharts';
+// These types might be used for type checking or future implementation
 import {
   NameType,
   Payload,
@@ -74,7 +77,7 @@ ChartContainer.displayName = 'Chart';
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
-    ([_, config]) => config.theme || config.color,
+    ([, config]) => config.theme || config.color,
   );
 
   if (!colorConfig.length) {

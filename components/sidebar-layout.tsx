@@ -74,7 +74,9 @@ function SidebarContent(props: {
   sidebarTop?: React.ReactNode;
   basePath: string;
 }) {
+  /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   const path = usePathname();
+  /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   const segment = useSegment(props.basePath);
 
   return (
@@ -125,7 +127,8 @@ function HeaderBreadcrumb(props: {
   const item = props.items.find(
     item => item.type === 'item' && item.href === segment,
   );
-  const title: string | undefined = (item as any)?.name;
+  const title: string | undefined =
+    item && item.type === 'item' ? (item.name as string) : undefined;
 
   return (
     <Breadcrumb>

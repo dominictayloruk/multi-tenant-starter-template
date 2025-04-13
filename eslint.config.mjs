@@ -17,17 +17,10 @@ const eslintConfig = [
       'prettier/prettier': [
         'error',
         {
-          trailingComma: 'all',
-          semi: true,
-          tabWidth: 2,
-          singleQuote: true,
-          printWidth: 80,
-          endOfLine: 'auto',
-          arrowParens: 'always',
-          plugins: ['prettier-plugin-tailwindcss'],
+          arrowParens: 'avoid',
         },
         {
-          usePrettierrc: false,
+          usePrettierrc: true,
         },
       ],
       'react/react-in-jsx-scope': 'off',
