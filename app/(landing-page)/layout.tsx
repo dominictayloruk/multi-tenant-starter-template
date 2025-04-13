@@ -22,7 +22,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         builtByLink="https://dominictaylor.dev/"
         githubLink="https://github.com/dominictayloruk/multi-tenant-starter-template/"
         twitterLink="https://twitter.com/dominictayloruk/"
-        linkedinLink="https://github.com/dominictayloruk/"
+        linkedinLink="https://linkedin.com/in/dominictayloruk/"
       />
     </div>
   );
