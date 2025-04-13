@@ -52,14 +52,28 @@ A minimalistic multi-tenant Next.js dashboard with minimal setup and a modular d
     npm run dev 
     ```
 
+## Deploying Dashboard
+
+1. Build the application
+
+    ```bash
+    npm run build
+    ```
+
+2. Start the production server
+
+    ```bash
+    npm run start
+    ```
+
 ## Features & Tech Stack
 
-- Next.js 14 app router
+- Next.js 15 app router
 - TypeScript
-- Tailwind & Shadcn UI
+- Tailwind 4 & Shadcn UI
 - Stack Auth
 - Multi-tenancy (teams/orgs)
-- Dark mode
+- Dark/Light mode
 
 ## Inspired by
 
