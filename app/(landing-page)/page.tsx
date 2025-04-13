@@ -33,6 +33,7 @@ export default async function IndexPage() {
         primaryCtaLink={stackServerApp.urls.signUp}
         secondaryCtaText="GitHub"
         secondaryCtaLink="https://github.com/dominictayloruk/multi-tenant-starter-template"
+        secondaryCtaIcon={<GitHubLogoIcon className="h-4 w-4" />}
         credits={
           <>
             Crafted with ❤️ by{' '}

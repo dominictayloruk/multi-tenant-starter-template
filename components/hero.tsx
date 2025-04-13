@@ -12,6 +12,7 @@ export function Hero(props: {
   primaryCtaLink: string;
   secondaryCtaText: string;
   secondaryCtaLink: string;
+  secondaryCtaIcon?: React.ReactNode;
 }) {
   return (
     <section className="space-y-6 py-32 md:py-48 lg:py-52">
@@ -43,6 +44,9 @@ export function Hero(props: {
             rel="noreferrer"
             className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
           >
+            {props.secondaryCtaIcon && (
+              <span className="mr-2">{props.secondaryCtaIcon}</span>
+            )}
             {props.secondaryCtaText}
           </Link>
         </div>
