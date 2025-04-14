@@ -1,6 +1,7 @@
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
 
 export function Hero(props: {
   capsuleText: string;
@@ -33,8 +34,18 @@ export function Hero(props: {
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             href={props.primaryCtaLink}
-            className={cn(buttonVariants({ size: 'lg' }))}
+            className={cn(buttonVariants({ size: 'lg' }), 'relative')}
           >
+            <GlowingEffect
+              variant="default"
+              glow={true}
+              disabled={false}
+              blur={3}
+              spread={40}
+              borderWidth={6}
+              proximity={10}
+              inactiveZone={0.01}
+            />
             {props.primaryCtaText}
           </Link>
 
