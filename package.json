@@ -17,11 +17,11 @@
     "@radix-ui/react-label": "^2.1.6",
     "@radix-ui/react-separator": "^1.1.6",
     "@radix-ui/react-slot": "^1.2.2",
-    "@stackframe/stack": "^2.8.11",
+    "@stackframe/stack": "^2.8.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.510.0",
-    "motion": "^12.11.3",
+    "motion": "^12.12.1",
     "next": "^15.3.2",
     "next-themes": "^0.4.6",
     "react": "^19.1.0",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@tailwindcss/postcss": "^4.1.6",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "^22.15.18",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -44,7 +44,7 @@
     "postcss": "^8",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.1.6",
+    "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3"
   }
 }
