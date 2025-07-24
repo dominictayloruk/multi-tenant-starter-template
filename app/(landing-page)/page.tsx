@@ -6,21 +6,8 @@ import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import { ComponentIcon, Users } from 'lucide-react';
 
 export default async function IndexPage() {
-  const project = await stackServerApp.getProject();
-  if (!project.config.clientTeamCreationEnabled) {
-    return (
-      <div className="flex min-h-96 w-full items-center justify-center">
-        <div className="max-w-xl gap-4">
-          <p className="text-xl font-bold">Setup Required</p>
-          <p className="">
-            {
-              'To start using this project, please enable client-side team creation in the Stack Auth dashboard (Project > Team Settings). This message will disappear once the feature is enabled.'
-            }
-          </p>
-        </div>
-      </div>
-    );
-  }
+  // Note: Team creation is handled by Stack Auth configuration
+  // Check your Stack Auth dashboard for team settings
 
   return (
     <>

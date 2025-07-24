@@ -10,14 +10,15 @@ import { useRouter } from 'next/navigation';
 export function PageClient() {
   const router = useRouter();
   const user = useUser({ or: 'redirect' });
+
   const teams = user.useTeams();
   const [teamDisplayName, setTeamDisplayName] = React.useState('');
 
   React.useEffect(() => {
-    if (teams.length > 0 && !user.selectedTeam) {
-      user.setSelectedTeam(teams[0]);
+    if (teams.length > 0) {
+      router.push(`/dashboard/${teams[0].id}`);
     }
-  }, [teams, user]);
+  }, [teams, router]);
 
   if (teams.length === 0) {
     return (
@@ -31,7 +32,8 @@ export function PageClient() {
             className="mt-4"
             onSubmit={e => {
               e.preventDefault();
-              user.createTeam({ displayName: teamDisplayName });
+              // Redirect to Stack Auth team creation
+              router.push('/handler/account-settings?tab=teams');
             }}
           >
             <div>
@@ -47,8 +49,6 @@ export function PageClient() {
         </div>
       </div>
     );
-  } else if (user.selectedTeam) {
-    router.push(`/dashboard/${user.selectedTeam.id}`);
   }
 
   return null;

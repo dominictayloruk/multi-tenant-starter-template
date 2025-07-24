@@ -1,7 +1,8 @@
 'use client';
 
 import SidebarLayout, { SidebarItem } from '@/components/sidebar-layout';
-import { SelectedTeamSwitcher, useUser } from '@stackframe/stack';
+import { TeamSwitcher } from '@/components/team-switcher';
+import { useUser } from '@stackframe/stack';
 import {
   BadgePercent,
   BarChart4,
@@ -85,26 +86,29 @@ const navigationItems: SidebarItem[] = [
 ];
 
 export default function Layout(props: { children: React.ReactNode }) {
-  const params = useParams<{ teamId: string }>();
   const user = useUser({ or: 'redirect' });
-  const team = user.useTeam(params.teamId);
+  const params = useParams<{ teamId: string }>();
   const router = useRouter();
 
+  const team = user.useTeam(params.teamId);
+  const teams = user.useTeams();
+
   if (!team) {
-    router.push('/dashboard');
+    router.push('/handler/account-settings');
     return null;
   }
+
+  // Create URL mapping for all teams
+  const urlMap: Record<string, string> = {};
+  teams.forEach(t => {
+    urlMap[t.id] = `/dashboard/${t.id}`;
+  });
 
   return (
     <SidebarLayout
       items={navigationItems}
       basePath={`/dashboard/${team.id}`}
-      sidebarTop={
-        <SelectedTeamSwitcher
-          selectedTeam={team}
-          urlMap={team => `/dashboard/${team.id}`}
-        />
-      }
+      sidebarTop={<TeamSwitcher selectedTeam={team} urlMap={urlMap} />}
       baseBreadcrumb={[
         {
           title: team.displayName,
