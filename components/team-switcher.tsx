@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useUser } from '@stackframe/stack';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -17,7 +18,7 @@ import { ChevronDown, Users } from 'lucide-react';
 interface Team {
   id: string;
   displayName: string;
-  profileImageUrl?: string;
+  profileImageUrl?: string | null;
 }
 
 interface TeamSwitcherProps {
@@ -41,9 +42,11 @@ export function TeamSwitcher({
         <Button variant="outline" className={cn('w-full', className)}>
           <div className="flex items-center gap-2">
             {currentTeam?.profileImageUrl ? (
-              <img
+              <Image
                 src={currentTeam.profileImageUrl}
                 alt={currentTeam.displayName}
+                width={24}
+                height={24}
                 className="h-6 w-6 rounded"
               />
             ) : (
@@ -68,9 +71,11 @@ export function TeamSwitcher({
             <DropdownMenuItem key={team.id} asChild>
               <a href={teamUrl} className="flex items-center gap-2">
                 {team.profileImageUrl ? (
-                  <img
+                  <Image
                     src={team.profileImageUrl}
                     alt={team.displayName}
+                    width={16}
+                    height={16}
                     className="h-4 w-4 rounded"
                   />
                 ) : (
