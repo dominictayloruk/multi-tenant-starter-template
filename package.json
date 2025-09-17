@@ -34,7 +34,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@playwright/test": "^1.55.0",
     "@tailwindcss/postcss": "^4.1.13",
-    "@types/node": "^22.18.3",
+    "@types/node": "^24.5.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9.35.0",
