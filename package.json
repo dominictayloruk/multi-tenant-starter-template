@@ -2,6 +2,10 @@
   "name": "multi-tenant-starter-template",
   "version": "0.1.1",
   "private": true,
+  "packageManager": "pnpm@10.21.0",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "next dev  --turbopack",
     "build": "next build",

@@ -17,12 +17,21 @@ stages:
 build:
   stage: build
   image: yobasystems/alpine-nodejs:min
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest --activate
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store/
   script:
-    - npm ci
-    - npm run build
+    - pnpm install --frozen-lockfile
+    - pnpm build
   artifacts:
     paths:
-      - .next/
+      - .next/static/
 
 sast:
   stage: test
@@ -31,10 +40,10 @@ test:
   stage: test
   image: yobasystems/alpine-nodejs:min
   script:
-    - 'if [ ! -d ".next" ]; then echo "Build failed: .next directory not found"
-      && exit 1; fi'
-    - 'if [ -z "$(ls -A .next)" ]; then echo "Build failed: .next directory is
-      empty" && exit 1; fi'
+    - 'if [ ! -d " .next/static/" ]; then echo "Build failed: .next/static
+      directory not found" && exit 1; fi'
+    - 'if [ -z "$(ls -A .next/static/)" ]; then echo "Build failed: .next/static
+      directory is empty" && exit 1; fi'
     - echo "Build completed successfully"
   dependencies:
     - build

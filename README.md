@@ -40,7 +40,7 @@ design. Bring your own backend and database.
 2. Install dependencies
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Set up Stack Auth:**
@@ -77,7 +77,7 @@ design. Bring your own backend and database.
    [http://localhost:3000](http://localhost:3000)
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ## Deploying Dashboard
@@ -85,13 +85,13 @@ design. Bring your own backend and database.
 1. Build the application
 
    ```bash
-   npm run build
+   pnpm run build
    ```
 
 2. Start the production server
 
    ```bash
-   npm run start
+   pnpm run start
    ```
 
 ## Troubleshooting
