@@ -42,7 +42,7 @@ test:
   stage: test
   image: yobasystems/alpine-nodejs:min
   script:
-    - 'if [ ! -d " .next/static/" ]; then echo "Build failed: .next/static
+    - 'if [ ! -d ".next/static/" ]; then echo "Build failed: .next/static
       directory not found" && exit 1; fi'
     - 'if [ -z "$(ls -A .next/static/)" ]; then echo "Build failed: .next/static
       directory is empty" && exit 1; fi'
