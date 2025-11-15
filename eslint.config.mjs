@@ -1,10 +1,7 @@
-import { FlatCompat } from '@eslint/eslintrc';
+import nextConfig from 'eslint-config-next';
+import prettierPlugin from 'eslint-plugin-prettier';
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
-
-const eslintConfig = [
+const config = [
   {
     ignores: [
       'node_modules/**',
@@ -14,14 +11,13 @@ const eslintConfig = [
       'next-env.d.ts',
     ],
   },
-  ...compat.config({
-    extends: [
-      'next',
-      'next/core-web-vitals',
-      'next/typescript',
-      'plugin:jsx-a11y/recommended',
-    ],
-    plugins: ['prettier', 'jsx-a11y'],
+  // Next.js recommended flat config (includes core-web-vitals & TypeScript)
+  ...nextConfig,
+  // Project-specific overrides and extra plugins
+  {
+    plugins: {
+      prettier: prettierPlugin,
+    },
     rules: {
       'prettier/prettier': [
         'error',
@@ -40,7 +36,7 @@ const eslintConfig = [
       'jsx-a11y/role-has-required-aria-props': 'warn',
       'jsx-a11y/role-supports-aria-props': 'warn',
     },
-  }),
+  },
 ];
 
-export default eslintConfig;
+export default config;

@@ -115,7 +115,7 @@ placeholder values are still being used.
 
 ## Features & Tech Stack
 
-- Next.js 15 app router
+- Next.js 16 app router
 - TypeScript
 - Tailwind 4 & Shadcn UI
 - Stack Auth
