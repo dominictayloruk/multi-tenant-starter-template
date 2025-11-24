@@ -1,7 +1,5 @@
 'use client';
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import * as React from 'react';
 import * as RechartsPrimitive from 'recharts';
 // These types might be used for type checking or future implementation

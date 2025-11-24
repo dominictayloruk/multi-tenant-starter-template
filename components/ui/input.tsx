@@ -3,7 +3,7 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 // This empty interface is intentional for component prop documentation and future extensibility
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 

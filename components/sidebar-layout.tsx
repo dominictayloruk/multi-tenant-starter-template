@@ -74,9 +74,8 @@ function SidebarContent(props: {
   sidebarTop?: React.ReactNode;
   basePath: string;
 }) {
-  /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   const path = usePathname();
-  /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+
   const segment = useSegment(props.basePath);
 
   return (
