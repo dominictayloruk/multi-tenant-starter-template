@@ -2,7 +2,7 @@
   "name": "multi-tenant-starter-template",
   "version": "0.1.1",
   "private": true,
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.3",
   "engines": {
     "node": ">=22"
   },
@@ -22,7 +22,7 @@
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
-    "@stackframe/stack": "^2.8.65",
+    "@stackframe/stack": "^2.8.67",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.563.0",
@@ -41,9 +41,9 @@
     "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^25.2.3",
-    "@types/react": "19.2.13",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "eslint": "^9.39.2",
+    "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -56,7 +56,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "19.2.13",
+      "@types/react": "19.2.14",
       "@types/react-dom": "19.2.3",
       "cookie@<0.7.0": ">=0.7.0"
     }
