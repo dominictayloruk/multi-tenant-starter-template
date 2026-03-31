@@ -36,7 +36,7 @@ importers:
         version: 1.2.4(@types/react@19.2.14)(react@19.2.4)
       '@stackframe/stack':
         specifier: ^2.8.79
-        version: 2.8.79(@aws-sdk/credential-provider-web-identity@3.972.27)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.1(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)
+        version: 2.8.79(@aws-sdk/credential-provider-web-identity@3.972.27)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.1(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.2)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -69,7 +69,7 @@ importers:
         version: 3.5.0
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.2.1)
+        version: 1.0.7(tailwindcss@4.2.2)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.5
@@ -117,8 +117,8 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2(prettier@3.8.1)
       tailwindcss:
-        specifier: ^4.2.1
-        version: 4.2.1
+        specifier: ^4.2.2
+        version: 4.2.2
       typescript:
         specifier: ^6.0.2
         version: 6.0.2
@@ -3836,9 +3836,6 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@4.2.1:
-    resolution: {integrity: sha512-/tBrSQ36vCleJkAOsy9kbNTgaxvGbyOamC30PRePTQe/o1MFwEKHQk4Cn7BNGaPtjp+PuUrByJehM1hgxfq4sw==}
-
   tailwindcss@4.2.2:
     resolution: {integrity: sha512-KWBIxs1Xb6NoLdMVqhbhgwZf2PGBpPEiwOqgI4pFIYbNTfBXiKYyWoTsXgBQ9WFg/OlhnvHaY+AEpW7wSmFo2Q==}
 
@@ -5932,7 +5929,7 @@ snapshots:
       - buffer
       - supports-color
 
-  '@stackframe/stack@2.8.79(@aws-sdk/credential-provider-web-identity@3.972.27)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.1(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)':
+  '@stackframe/stack@2.8.79(@aws-sdk/credential-provider-web-identity@3.972.27)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(next@16.2.1(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.58.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.2)':
     dependencies:
       '@hookform/resolvers': 5.2.2(react-hook-form@7.72.0(react@19.2.4))
       '@oslojs/otp': 1.1.0
@@ -5957,7 +5954,7 @@ snapshots:
       react-easy-crop: 5.5.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-hook-form: 7.72.0(react@19.2.4)
       rrweb: 1.1.3
-      tailwindcss-animate: 1.0.7(tailwindcss@4.2.1)
+      tailwindcss-animate: 1.0.7(tailwindcss@4.2.2)
       tsx: 4.21.0
       yup: 1.7.1
     optionalDependencies:
@@ -8181,11 +8178,9 @@ snapshots:
 
   tailwind-merge@3.5.0: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.2.1):
+  tailwindcss-animate@1.0.7(tailwindcss@4.2.2):
     dependencies:
-      tailwindcss: 4.2.1
-
-  tailwindcss@4.2.1: {}
+      tailwindcss: 4.2.2
 
   tailwindcss@4.2.2: {}
 
