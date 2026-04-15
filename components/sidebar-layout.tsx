@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { UserButton } from '@stackframe/stack';
-import { LucideIcon, Menu } from 'lucide-react';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -28,7 +28,7 @@ function useSegment(basePath: string) {
 type Item = {
   name: React.ReactNode;
   href: string;
-  icon: LucideIcon;
+  icon: React.ElementType;
   type: 'item';
 };
 
@@ -184,7 +184,7 @@ export default function SidebarLayout(props: {
               open={sidebarOpen}
             >
               <SheetTrigger>
-                <Menu />
+                <HamburgerMenuIcon />
               </SheetTrigger>
               <SheetContent side="left" className="w-[240px] p-0">
                 <SidebarContent

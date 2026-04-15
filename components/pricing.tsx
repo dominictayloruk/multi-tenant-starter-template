@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { CheckIcon } from '@radix-ui/react-icons';
 
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
@@ -41,7 +41,7 @@ export function PricingCard(props: PricingCardProps) {
         <ul className="space-y-2">
           {props.features.map((feature, index) => (
             <li key={index} className="flex items-center">
-              <Check className="text-primary mr-2 h-4 w-4" />
+              <CheckIcon className="text-primary mr-2 h-4 w-4" />
               <span>{feature}</span>
             </li>
           ))}

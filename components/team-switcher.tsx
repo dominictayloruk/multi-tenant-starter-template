@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ChevronDown, Users } from 'lucide-react';
+import { ChevronDownIcon, PersonIcon } from '@radix-ui/react-icons';
 
 interface Team {
   id: string;
@@ -51,14 +51,14 @@ export function TeamSwitcher({
               />
             ) : (
               <div className="bg-primary text-primary-foreground flex h-6 w-6 items-center justify-center rounded">
-                <Users className="h-4 w-4" />
+                <PersonIcon className="h-4 w-4" />
               </div>
             )}
             <span className="truncate">
               {currentTeam?.displayName || 'Select team'}
             </span>
           </div>
-          <ChevronDown className="ml-auto h-4 w-4" />
+          <ChevronDownIcon className="ml-auto h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
@@ -80,7 +80,7 @@ export function TeamSwitcher({
                   />
                 ) : (
                   <div className="bg-background flex h-4 w-4 items-center justify-center rounded border">
-                    <Users className="h-3 w-3" />
+                    <PersonIcon className="h-3 w-3" />
                   </div>
                 )}
                 <span className="truncate">{team.displayName}</span>

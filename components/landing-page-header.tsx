@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { useStackApp, useUser } from '@stackframe/stack';
-import { Menu, X } from 'lucide-react';
+import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import * as React from 'react';
@@ -138,9 +138,9 @@ export function LandingPageHeader(props: NavProps) {
             onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
             {showMobileMenu ? (
-              <X className="h-6 w-6" />
+              <Cross1Icon className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <HamburgerMenuIcon className="h-6 w-6" />
             )}
           </Button>
 

@@ -1,20 +1,22 @@
 'use client';
 
-import SidebarLayout, { SidebarItem } from '@/components/sidebar-layout';
-import { TeamSwitcher } from '@/components/team-switcher';
-import { useUser } from '@stackframe/stack';
-import {
-  BadgePercent,
-  BarChart4,
-  Columns3,
-  Globe,
-  Locate,
-  Settings2,
-  ShoppingBag,
-  ShoppingCart,
-  Users,
-} from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
+
+import {
+  BackpackIcon as ShoppingBag,
+  BackpackIcon as ShoppingCart,
+  BarChartIcon as BarChart4,
+  GlobeIcon as Globe,
+  LayoutIcon as Columns3,
+  MixerHorizontalIcon as Settings2,
+  PersonIcon as Users,
+  StarIcon as BadgePercent,
+  TargetIcon as Locate,
+} from '@radix-ui/react-icons';
+import { useUser } from '@stackframe/stack';
+
+import SidebarLayout, { type SidebarItem } from '@/components/sidebar-layout';
+import { TeamSwitcher } from '@/components/team-switcher';
 
 const navigationItems: SidebarItem[] = [
   {

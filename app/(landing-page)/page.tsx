@@ -3,7 +3,7 @@ import { Hero } from '@/components/hero';
 import { PricingGrid } from '@/components/pricing';
 import { stackServerApp } from '@/stack';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { ComponentIcon, Users } from 'lucide-react';
+import { Component1Icon, PersonIcon } from '@radix-ui/react-icons';
 
 export default async function IndexPage() {
   // Note: Team creation is handled by Stack Auth configuration
@@ -105,7 +105,7 @@ export default async function IndexPage() {
               'Comprehensive Authentication: OAuth, User Management, and more.',
           },
           {
-            icon: <Users className="h-12 w-12" />,
+            icon: <PersonIcon className="h-12 w-12" />,
             title: 'Multi-tenancy & RBAC',
             description: 'Built-in Teams and Permissions.',
           },
@@ -115,7 +115,7 @@ export default async function IndexPage() {
             description: 'Open-source and self-hostable codebase.',
           },
           {
-            icon: <ComponentIcon className="h-12 w-12" />,
+            icon: <Component1Icon className="h-12 w-12" />,
             title: 'Modular Design',
             description: 'Easily extend and customize. No spaghetti code.',
           },

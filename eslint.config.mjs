@@ -12,7 +12,22 @@ const config = [
     ],
   },
   // Next.js recommended flat config (includes core-web-vitals & TypeScript)
-  ...nextConfig,
+  ...nextConfig.map(c => {
+    const cloned = { ...c };
+    if (c.plugins && c.plugins.react) {
+      const { react, ...restPlugins } = c.plugins;
+      cloned.plugins = restPlugins;
+    }
+    if (c.rules) {
+      cloned.rules = Object.fromEntries(
+        Object.entries(c.rules).filter(
+          ([key]) =>
+            !key.startsWith('react/') && !key.startsWith('react-hooks/'),
+        ),
+      );
+    }
+    return cloned;
+  }),
   // Project-specific overrides and extra plugins
   {
     plugins: {
@@ -28,7 +43,6 @@ const config = [
           usePrettierrc: true,
         },
       ],
-      'react/react-in-jsx-scope': 'off',
       'jsx-a11y/alt-text': 'warn',
       'jsx-a11y/aria-props': 'warn',
       'jsx-a11y/aria-proptypes': 'warn',

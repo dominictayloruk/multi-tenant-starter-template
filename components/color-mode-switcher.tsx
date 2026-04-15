@@ -1,6 +1,6 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 
@@ -15,7 +15,7 @@ export function ColorModeSwitcher() {
         onClick={() => setTheme('dark')}
         className="dark:hidden"
       >
-        <Moon />
+        <MoonIcon width={24} height={24} />
       </Button>
 
       <Button
@@ -24,7 +24,7 @@ export function ColorModeSwitcher() {
         onClick={() => setTheme('light')}
         className="hidden dark:flex"
       >
-        <Sun />
+        <SunIcon width={24} height={24} />
       </Button>
     </>
   );
