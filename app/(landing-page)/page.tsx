@@ -1,9 +1,12 @@
+import {
+  Component1Icon,
+  GitHubLogoIcon,
+  PersonIcon,
+} from '@radix-ui/react-icons';
 import { FeatureGrid } from '@/components/features';
 import { Hero } from '@/components/hero';
 import { PricingGrid } from '@/components/pricing';
 import { stackServerApp } from '@/stack';
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { Component1Icon, PersonIcon } from '@radix-ui/react-icons';
 
 export default async function IndexPage() {
   // Note: Team creation is handled by Stack Auth configuration

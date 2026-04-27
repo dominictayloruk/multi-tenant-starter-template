@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -161,7 +161,7 @@
   z-index: 9999;
 }
 .loader::after {
-  content: '';
+  content: "";
   width: 40%;
   height: 3px;
   position: absolute;

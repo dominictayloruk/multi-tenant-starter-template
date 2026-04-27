@@ -1,11 +1,11 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { useStackApp, useUser } from '@stackframe/stack';
-import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import * as React from 'react';
+import { cn } from '@/lib/utils';
 import { ColorModeSwitcher } from './color-mode-switcher';
 import { Logo } from './logo';
 import { Button, buttonVariants } from './ui/button';

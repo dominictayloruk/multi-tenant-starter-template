@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test('should have the correct page title', async ({ page }) => {
   // Navigate to the development server

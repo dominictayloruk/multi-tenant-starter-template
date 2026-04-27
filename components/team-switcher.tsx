@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import { ChevronDownIcon, PersonIcon } from '@radix-ui/react-icons';
 import { useUser } from '@stackframe/stack';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ChevronDownIcon, PersonIcon } from '@radix-ui/react-icons';
+import { cn } from '@/lib/utils';
 
 interface Team {
   id: string;

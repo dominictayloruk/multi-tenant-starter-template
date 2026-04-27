@@ -1,6 +1,6 @@
-import React from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
-
+import Link from 'next/link';
+import React from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Card,
@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Link from 'next/link';
 
 type PricingCardProps = {
   title: string;

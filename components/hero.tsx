@@ -1,7 +1,7 @@
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { cn } from '@/lib/utils';
 
 export function Hero(props: {
   capsuleText: string;

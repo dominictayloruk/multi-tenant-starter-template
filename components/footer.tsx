@@ -1,10 +1,10 @@
-import { buttonVariants } from '@/components/ui/button';
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from '@radix-ui/react-icons';
 import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
 
 export function Footer(props: {
   builtBy: string;

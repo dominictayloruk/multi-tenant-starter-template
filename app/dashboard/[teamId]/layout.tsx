@@ -1,19 +1,18 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
-
 import {
+  StarIcon as BadgePercent,
+  BarChartIcon as BarChart4,
+  LayoutIcon as Columns3,
+  GlobeIcon as Globe,
+  TargetIcon as Locate,
+  MixerHorizontalIcon as Settings2,
   BackpackIcon as ShoppingBag,
   BackpackIcon as ShoppingCart,
-  BarChartIcon as BarChart4,
-  GlobeIcon as Globe,
-  LayoutIcon as Columns3,
-  MixerHorizontalIcon as Settings2,
   PersonIcon as Users,
-  StarIcon as BadgePercent,
-  TargetIcon as Locate,
 } from '@radix-ui/react-icons';
 import { useUser } from '@stackframe/stack';
+import { useParams, useRouter } from 'next/navigation';
 
 import SidebarLayout, { type SidebarItem } from '@/components/sidebar-layout';
 import { TeamSwitcher } from '@/components/team-switcher';
