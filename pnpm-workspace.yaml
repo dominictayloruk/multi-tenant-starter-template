@@ -1,6 +1,11 @@
 allowBuilds:
   esbuild: true
   sharp: true
+minimumReleaseAgeExclude:
+  - '@stackframe/stack-sc@2.8.108'
+  - '@stackframe/stack-shared@2.8.108'
+  - '@stackframe/stack-ui@2.8.108'
+  - '@stackframe/stack@2.8.108'
 onlyBuiltDependencies:
   - esbuild
   - sharp
