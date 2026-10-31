@@ -26,13 +26,13 @@ build:
       files:
         - pnpm-lock.yaml
     paths:
-      - '.pnpm-store/'
+      - ".pnpm-store/"
   script:
     - pnpm install --frozen-lockfile
     - pnpm build
   artifacts:
     paths:
-      - '.next/static/'
+      - ".next/static/"
 sast:
   stage: test
 test:
