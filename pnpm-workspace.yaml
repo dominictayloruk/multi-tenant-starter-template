@@ -6,7 +6,5 @@ minimumReleaseAgeExclude:
   - "@stackframe/stack-shared@2.8.108"
   - "@stackframe/stack-ui@2.8.108"
   - "@stackframe/stack@2.8.108"
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
-  - unrs-resolver
+overrides:
+  "cookie@<0.7.0": ">=0.7.0"

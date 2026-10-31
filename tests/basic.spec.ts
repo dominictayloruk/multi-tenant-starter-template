@@ -1,16 +1,51 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ page }) => {
+  // If running against placeholder Stack Auth credentials, provide a mock project metadata response
+  // so auth UI components can render reliably without an external Stack Auth project dependency.
+  const isPlaceholder =
+    !process.env.NEXT_PUBLIC_STACK_PROJECT_ID ||
+    process.env.NEXT_PUBLIC_STACK_PROJECT_ID ===
+      '11111111-1111-4111-8111-111111111111';
+
+  if (isPlaceholder) {
+    await page.route('**/api/v1/projects/current', async route => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          id: '11111111-1111-4111-8111-111111111111',
+          display_name: 'Stack Template',
+          config: {
+            sign_up_enabled: true,
+            credential_enabled: true,
+            magic_link_enabled: true,
+            passkey_enabled: true,
+            client_team_creation_enabled: true,
+            client_user_deletion_enabled: true,
+            allow_localhost: true,
+            allow_user_api_keys: true,
+            allow_team_api_keys: true,
+            enabled_oauth_providers: [{ id: 'github' }, { id: 'google' }],
+            domains: [],
+          },
+        }),
+      });
+    });
+  }
+});
+
 test('should have the correct page title', async ({ page }) => {
-  // Navigate to the development server
-  await page.goto('http://localhost:3000/');
+  // Navigate to the server
+  await page.goto('/');
 
   // Expect the title to contain the project name
   await expect(page).toHaveTitle(/Stack Template/);
 });
 
 test('should navigate to Sign In page', async ({ page }) => {
-  // Navigate to the development server
-  await page.goto('http://localhost:3000/');
+  // Navigate to the server
+  await page.goto('/');
 
   // Find the 'Sign In' link and click it
   await page.getByRole('link', { name: 'Sign In' }).click();
@@ -49,8 +84,8 @@ test('should navigate to Sign In page', async ({ page }) => {
 });
 
 test('should navigate to Sign Up page', async ({ page }) => {
-  // Navigate to the development server
-  await page.goto('http://localhost:3000/');
+  // Navigate to the server
+  await page.goto('/');
 
   // Find the 'Sign Up' link and click it
   await page.getByRole('link', { name: 'Sign Up' }).click();
